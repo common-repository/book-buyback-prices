@@ -1,0 +1,70 @@
+#bbbp_isbn_input {
+	margin-right: 10px;
+}
+
+.bbbp_book {
+	overflow: auto; /* clearfix */
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.bbbp_book_image {
+	max-height: 200px;
+	padding-right: 20px;
+	float:left;
+}
+.bbbp_book_title {
+	font-size: larger;
+	font-weight: bold;
+}
+.bbbp_book_line_label {
+	font-size: smaller;
+	width: 90px;
+	display:inline-block;
+}
+
+/* https://stackoverflow.com/questions/37159666/ul-table-with-li-table-cell */
+
+ul.bbbpResultsUL {
+  box-sizing: border-box;
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin:0;
+  align-items: stretch;
+}
+
+ul.bbbpResultsUL li {
+  box-sizing: border-box;
+  flex: 0 0 30%;
+  /* border: 1px solid grey; */
+  padding: 2em;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  justify-content: center;
+}
+ul.bbbpResultsUL li .bbbp_price {
+	font-size: 24px;
+	font-weight: bold;
+}
+ul.bbbpResultsUL li .bbbp_vendorName {
+	display:none;
+}
+
+@media screen and ( max-width: 1024px ) { 
+ ul.bbbpResultsUL li {
+ 	flex: 0 0 50%;
+ }
+}
+
+
+@media screen and ( max-width: 480px ) { 
+	.bbbp_book_image {
+		float:none;
+		max-width: 100%;
+	}
+ ul.bbbpResultsUL li {
+ 	flex: 0 0 100%;
+ }
+}
